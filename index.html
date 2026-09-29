@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockbuster-Fest: Edición Navideña</title>
+    
+    <!-- fuentes google -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+
+    <!-- mi hoja de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- cabecera del sitio -->
+    <header class="cabecera">
+        <div class="logo">
+            <h1>Blockbuster-Fest</h1>
+        </div>
+        
+        <!-- enlaces del menu -->
+        <nav class="menu-navegacion" id="menu">
+            <a href="#festival">El Festival</a>
+            <a href="#cartelera">Cartelera</a>
+            <a href="#tarifas">Tarifas</a>
+            <a href="#reserva">Reserva</a>
+        </nav>
+        
+        <!-- boton del menu movil -->
+        <button class="boton-menu" id="btn-menu">
+            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </header>
+
+    <!-- cuerpo de pagina -->
+    <main>
+
+        <!-- seccion 1 festival -->
+        <section id="festival" class="seccion-festival">
+            <div class="contenedor-festival">
+                
+                <div class="imagen-festival">
+                    <img src="https://www.centrocentro.org/sites/default/files/styles/imagenes_medianas/public/static_page/image/Galer%C3%ADa%20de%20Cristal%201170x630_0.jpg.webp?itok=J75oF9nz" alt="Galería de Cristal del Palacio de Cibeles">
+                </div>
+
+                <!-- contenido festival -->
+                <div class="texto-festival">
+                    <h2>Presentación del festival</h2>
+                    <p>Blockbuster-Fest: Edición Navideña cuenta con una propuesta cultural para diferentes generaciones, diseñada para revivir la esencia cinematográfica de la icónica época de los 80 en un entorno familiar y confortable. El evento se celebrará durante el periodo de invierno, del 26 al 30 de diciembre, aprovechando las navidad para reunir a familias junto a clásicos de la cultura pop. Para garantizar una buena experiencia con el clima frío en Madrid, el festival se realizará en la Galería de Cristal del Palacio de Cibeles. Este espacio, climatizado y techado, ofrece el espacio adecuado para colocar una pantalla de gran formato, compartiendo un ambiente cómodo entre las familias.</p>
+                </div>
+                
+            </div>
+        </section>
+                <!-- seccion 2 cartelera -->
+        <section id="cartelera" class="seccion-cartelera">
+            <h2>Cartelera de películas</h2>
+            
+            <!-- contenedor pelis normales -->
+            <div class="cuadricula-peliculas">
+                
+                <div class="tarjeta-pelicula">
+                    <div class="caja-poster">Póster E.T.</div>
+                    <h3>E.T. El Extraterrestre</h3>
+                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                </div>
+                
+                <div class="tarjeta-pelicula">
+                    <div class="caja-poster">Póster Los Goonies</div>
+                    <h3>Los Goonies</h3>
+                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                </div>
+                
+                <div class="tarjeta-pelicula">
+                    <div class="caja-poster">Volver al futuro</div>
+                    <h3>Volver al Futuro</h3>
+                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                </div>
+                
+            </div>
+
+            <!-- contenedor destacado ultima pelicula -->
+            <div class="pelicula-destacada">
+                <div class="poster-destacado">Póster Gremlins - Experiencia inmersiva Gourmet!</div>
+                <div class="texto-destacado">
+                    <h3>¡Queremos cerrar el festival de la mejor manera!</h3>
+                    <p>Es por eso que te invitamos a participar en nuestra última proyección, Gremlins, que podrás disfrutar compartiendo las mismas comidas de la cinta en familia en simultáneo a los personajes.</p>
+                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- mi script de javascript -->
+    <script src="app.js"></script>
+</body>
+</html>

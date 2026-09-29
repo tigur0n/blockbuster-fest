@@ -1,0 +1,230 @@
+/* mis variables del dossier invertidas */
+:root {
+    --fondo-principal: #F7F4EB;       /* ahora el fondo es el crema claro */
+    --contenedores: #1A2536;          /* el azul oscuro pasa a ser para bloques y texto */
+    --texto-informativo: #1A2536;     /* lectura limpia en azul oscuro */
+    --botones-destacados: #D95338;    /* naranja terracota para destacados */
+    --detalles-secundarios: #EBB15B;  /* amarillo mostaza */
+    
+    --fuente-titulos: "Caprasimo", serif;
+    --fuente-cuerpo: "DM Sans", sans-serif;
+}
+
+/* estilos globales */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo-principal);
+    color: var(--texto-informativo);
+    font-family: var(--fuente-cuerpo);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--botones-destacados); /* titulos en naranja terracota */
+    margin: 0 0 15px 0;
+}
+
+/* estilos menu pc */
+.cabecera {
+    background-color: var(--contenedores); /* cabecera en azul oscuro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.cabecera h1 {
+    color: var(--detalles-secundarios); /* titulo principal en amarillo */
+    font-size: 28px;
+    margin: 0;
+}
+
+.menu-navegacion a {
+    color: var(--fondo-principal); /* letras crema en pc */
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: color 0.3s ease; 
+}
+
+.menu-navegacion a:hover {
+    color: var(--detalles-secundarios); /* cambia a amarillo al pasar el mouse */
+}
+
+.boton-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: var(--detalles-secundarios); /* boton hamburguesa amarillo */
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SECCIÓN 1: EL FESTIVAL
+   ========================================================================== */
+.seccion-festival {
+    padding: 80px 40px; /* margen interno de separacion */
+    max-width: 1200px;  
+    margin: 0 auto;     
+}
+
+.contenedor-festival {
+    display: flex;       
+    gap: 40px;          
+    align-items: center; 
+}
+
+.imagen-festival, .texto-festival {
+    flex: 1; 
+}
+
+.imagen-festival img {
+    width: 100%;       
+    height: auto;      
+    border-radius: 8px; 
+}
+
+.texto-festival p {
+    line-height: 1.6;        
+    text-align: left;        
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   SECCIÓN 2: CARTELERA (Estructura en rejilla y márgenes)
+   ========================================================================== */
+.seccion-cartelera {
+    padding: 80px 40px; /* margen interno generoso */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cuadricula-peliculas {
+    display: flex;      /* alinea las 3 peliculas en fila horizontal */
+    gap: 30px;          /* espacio de separacion entre tarjetas */
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.tarjeta-pelicula {
+    flex: 1;
+    text-align: left;   /* descripcion alineada a la izquierda */
+}
+
+.caja-poster {
+    background-color: var(--contenedores); /* caja azul oscuro como poster provisional */
+    color: var(--fondo-principal);
+    height: 380px;      /* mantiene el formato vertical del poster */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 15px; /* separacion entre poster y su texto inferior */
+}
+
+.tarjeta-pelicula h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.sinopsis {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--texto-informativo);
+}
+
+/* bloque de la ultima pelicula destacada (Gremlins) */
+.pelicula-destacada {
+    display: flex;
+    gap: 40px;
+    background-color: var(--contenedores); /* fondo azul oscuro destacado */
+    color: var(--fondo-principal);         /* texto crema para leer bien adentro */
+    padding: 40px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.poster-destacado {
+    flex: 1;
+    background-color: var(--botones-destacados); /* caja naranja de poster gourmet */
+    color: var(--fondo-principal);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+
+.texto-destacado {
+    flex: 1;
+}
+
+.texto-destacado h3 {
+    color: var(--detalles-secundarios); /* titulo interno amarillo */
+}
+
+/* estilos menu movil */
+@media (max-width: 768px) {
+    .boton-menu {
+        display: block;
+    }
+
+    .menu-navegacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        background-color: var(--contenedores); /* menu desplegado azul oscuro */
+        position: fixed; 
+        top: 68px;
+        right: 0; 
+        width: 100%; 
+        height: calc(100vh - 68px); 
+        padding: 40px 20px;
+        transform: translateX(100%); 
+        transition: transform 0.4s ease; 
+        z-index: 99;
+    }
+
+    .menu-navegacion a {
+        color: var(--fondo-principal); /* letras crema en menu movil */
+        font-size: 22px; 
+        margin: 20px 0;
+    }
+
+    .menu-navegacion a:hover {
+        color: var(--detalles-secundarios);
+    }
+
+    .menu-navegacion.activo {
+        transform: translateX(0); 
+    }
+
+    /* adaptacion de secciones para celulares */
+    .seccion-festival, .seccion-cartelera {
+        padding: 40px 20px; 
+    }
+
+    .contenedor-festival, .cuadricula-peliculas, .pelicula-destacada {
+        flex-direction: column; /* todo se apila en una sola columna vertical */
+        gap: 30px;
+    }
+
+    .caja-poster {
+        height: 420px; /* conserva el formato vertical grande en el movil */
+        width: 100%;
+    }
+}
