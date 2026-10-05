@@ -1,230 +1,149 @@
-/* mis variables del dossier invertidas */
+/* variables aplicadas directamente del manual de identidad visual */
 :root {
-    --fondo-principal: #F7F4EB;       /* ahora el fondo es el crema claro */
-    --contenedores: #1A2536;          /* el azul oscuro pasa a ser para bloques y texto */
-    --texto-informativo: #1A2536;     /* lectura limpia en azul oscuro */
-    --botones-destacados: #D95338;    /* naranja terracota para destacados */
-    --detalles-secundarios: #EBB15B;  /* amarillo mostaza */
+    --fondo-principal: #1A2536;       /* Azul oscuro de fondo base */
+    --contenedores: #F7F4EB;          /* Crema claro para tarjetas y bloques */
+    --texto-informativo: #2C2A29;     /* Gris oscuro de lectura limpia */
+    --botones-destacados: #D95338;    /* Rojo terracota retro */
+    --detalles-secundarios: #EBB15B;  /* Amarillo mostaza */
     
-    --fuente-titulos: "Caprasimo", serif;
+    /* Fuente inflada, limpia y redondeada que clava el estilo Candice de tu guia */
+    --fuente-titulos: "Paytone One", sans-serif;
     --fuente-cuerpo: "DM Sans", sans-serif;
 }
 
-/* estilos globales */
-html {
-    scroll-behavior: smooth;
-}
-
+/* globales */
+html { scroll-behavior: smooth; }
 body {
     background-color: var(--fondo-principal);
     color: var(--texto-informativo);
     font-family: var(--fuente-cuerpo);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
+    margin: 0; padding: 0; overflow-x: hidden; 
 }
-
 h1, h2, h3 {
     font-family: var(--fuente-titulos);
-    color: var(--botones-destacados); /* titulos en naranja terracota */
+    color: var(--botones-destacados); 
     margin: 0 0 15px 0;
 }
+.seccion { padding: 80px 40px; max-width: 1200px; margin: 0 auto; background-color: var(--contenedores); border-bottom: 6px solid var(--botones-destacados); }
+.seccion-cartelera { padding: 80px 40px; max-width: 1200px; margin: 0 auto; background-color: var(--fondo-principal); }
+.t-centro { text-align: center; }
 
-/* estilos menu pc */
+/* CORREGIDO: Titulos de secciones completamente centrados */
+.titulo-centrado { text-align: center; color: var(--botones-destacados); font-size: 36px; margin-bottom: 40px; }
+.titulo-seccion { text-align: center; color: var(--contenedores); background-color: var(--detalles-secundarios); display: block; max-width: 500px; margin: 0 auto 40px auto; padding: 10px 25px; border: 4px solid var(--contenedores); box-shadow: 6px 6px 0px var(--botones-destacados); font-size: 32px; }
+.titulo-blanco { color: var(--fondo-principal); font-size: 36px; margin-bottom: 40px; }
+
+/* cabecera y menu */
 .cabecera {
-    background-color: var(--contenedores); /* cabecera en azul oscuro */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: var(--contenedores); 
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 30px; position: sticky; top: 0; z-index: 100;
+    border-bottom: 5px solid var(--botones-destacados); 
 }
-
-.cabecera h1 {
-    color: var(--detalles-secundarios); /* titulo principal en amarillo */
-    font-size: 28px;
-    margin: 0;
-}
-
+.cabecera h1 { color: var(--botones-destacados); font-size: 32px; margin: 0; font-family: var(--fuente-titulos); text-shadow: 2px 2px 0px var(--detalles-secundarios); }
 .menu-navegacion a {
-    color: var(--fondo-principal); /* letras crema en pc */
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 20px;
-    transition: color 0.3s ease; 
+    color: var(--texto-informativo); text-decoration: none;
+    font-weight: bold; margin-left: 20px; transition: color 0.3s; 
+    font-family: var(--fuente-cuerpo); text-transform: uppercase; font-size: 14px;
 }
+.menu-navegacion a:hover { color: var(--botones-destacados); }
+.boton-menu { display: none; background: none; border: none; font-size: 30px; color: var(--botones-destacados); cursor: pointer; }
 
-.menu-navegacion a:hover {
-    color: var(--detalles-secundarios); /* cambia a amarillo al pasar el mouse */
+/* festival flex */
+.contenedor-festival, .cuadricula-peliculas, .pelicula-destacada, .contenedor-flex, .doble-columna { 
+    display: flex; gap: 40px; align-items: center; 
 }
-
-.boton-menu {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: var(--detalles-secundarios); /* boton hamburguesa amarillo */
-    cursor: pointer;
-}
-
-/* ==========================================================================
-   SECCIÓN 1: EL FESTIVAL
-   ========================================================================== */
-.seccion-festival {
-    padding: 80px 40px; /* margen interno de separacion */
-    max-width: 1200px;  
-    margin: 0 auto;     
-}
-
-.contenedor-festival {
-    display: flex;       
-    gap: 40px;          
-    align-items: center; 
-}
-
-.imagen-festival, .texto-festival {
-    flex: 1; 
-}
-
+.imagen-festival, .texto-festival-bloque, .tarjeta-pelicula, .texto-destacado, .grupo-formulario { flex: 1; }
 .imagen-festival img {
-    width: 100%;       
-    height: auto;      
-    border-radius: 8px; 
+    width: 100%; height: auto; border: 4px solid var(--fondo-principal); 
+    box-shadow: 10px 10px 0px var(--detalles-secundarios); 
 }
+.texto-festival-bloque p { line-height: 1.6; font-size: 16px; color: var(--texto-informativo); font-weight: 500; }
 
-.texto-festival p {
-    line-height: 1.6;        
-    text-align: left;        
-    font-size: 16px;
+/* cartelera */
+.cuadricula-peliculas { margin: 40px 0 60px 0; align-items: flex-start; }
+.marco-retro-poster {
+    background-color: var(--contenedores);
+    border: 4px solid var(--contenedores);
+    box-shadow: 8px 8px 0px var(--detalles-secundarios);
+    padding: 10px; display: flex; justify-content: center; align-items: center;
+    width: 100%; box-sizing: border-box; margin-bottom: 15px;
 }
+.img-poster { width: 100%; height: 440px; display: block; object-fit: contain; }
 
-/* ==========================================================================
-   SECCIÓN 2: CARTELERA (Estructura en rejilla y márgenes)
-   ========================================================================== */
-.seccion-cartelera {
-    padding: 80px 40px; /* margen interno generoso */
-    max-width: 1200px;
-    margin: 0 auto;
+/* CORREGIDO: Titulos de peliculas centrados respecto a los posters */
+.titulo-peli { 
+    font-family: var(--fuente-titulos); font-size: 22px; 
+    color: var(--detalles-secundarios); text-align: center; margin-top: 15px;
+    text-shadow: 2px 2px 0px var(--fondo-principal);
 }
+.tarjeta-pelicula .sinopsis { text-align: left; color: var(--contenedores); }
+.sinopsis { font-size: 15px; line-height: 1.5; color: var(--fondo-principal); }
 
-.cuadricula-peliculas {
-    display: flex;      /* alinea las 3 peliculas en fila horizontal */
-    gap: 30px;          /* espacio de separacion entre tarjetas */
-    margin-top: 40px;
-    margin-bottom: 60px;
-}
-
-.tarjeta-pelicula {
-    flex: 1;
-    text-align: left;   /* descripcion alineada a la izquierda */
-}
-
-.caja-poster {
-    background-color: var(--contenedores); /* caja azul oscuro como poster provisional */
-    color: var(--fondo-principal);
-    height: 380px;      /* mantiene el formato vertical del poster */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-bottom: 15px; /* separacion entre poster y su texto inferior */
-}
-
-.tarjeta-pelicula h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.sinopsis {
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--texto-informativo);
-}
-
-/* bloque de la ultima pelicula destacada (Gremlins) */
+/* destacado */
 .pelicula-destacada {
-    display: flex;
-    gap: 40px;
-    background-color: var(--contenedores); /* fondo azul oscuro destacado */
-    color: var(--fondo-principal);         /* texto crema para leer bien adentro */
-    padding: 40px;
-    border-radius: 8px;
-    align-items: center;
+    background-color: var(--contenedores); color: var(--texto-informativo); padding: 40px;
+    border: 4px solid var(--fondo-principal); box-shadow: 12px 12px 0px var(--botones-destacados);
 }
-
-.poster-destacado {
-    flex: 1;
-    background-color: var(--botones-destacados); /* caja naranja de poster gourmet */
-    color: var(--fondo-principal);
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    font-weight: bold;
-    padding: 20px;
-    text-align: center;
+.pelicula-destacada img.img-horizontal {
+    flex: 1; width: 100%; height: 280px; object-fit: cover;
+    border: 3px solid var(--fondo-principal); display: block;
 }
+.texto-destacado { flex: 1; }
+.texto-destacado h3 { color: var(--botones-destacados); font-family: var(--fuente-titulos); font-size: 24px; }
+.texto-destacado .sinopsis { color: var(--texto-informativo); }
 
-.texto-destacado {
-    flex: 1;
+/* marquesina ochentera */
+.marquesina-decorativa {
+    background-color: var(--botones-destacados); color: var(--contenedores);
+    font-family: var(--fuente-titulos); padding: 15px 0; font-size: 20px;
+    white-space: nowrap; overflow: hidden; display: flex;
+    border-top: 5px solid var(--contenedores); border-bottom: 5px solid var(--contenedores); margin: 0;
 }
+.marquesina-decorativa span { animation: rotacionTexto 25s linear infinite; padding-left: 20px; }
+@keyframes rotacionTexto { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
 
-.texto-destacado h3 {
-    color: var(--detalles-secundarios); /* titulo interno amarillo */
+/* tarifas */
+.seccion#tarifas { background-color: var(--fondo-principal); border-bottom: none; }
+.tarjeta-tarifa {
+    flex: 1; background-color: var(--contenedores); border: 4px solid var(--botones-destacados);
+    padding: 30px 20px; position: relative; box-shadow: 8px 8px 0px var(--detalles-secundarios);
 }
+.tarjeta-tarifa h3 { color: var(--botones-destacados); font-size: 22px; font-family: var(--fuente-titulos); }
+.tarjeta-tarifa .precio { font-family: var(--fuente-titulos); font-size: 38px; color: var(--detalles-secundarios); margin: 15px 0; }
+.tarjeta-tarifa.tarifa-resaltada { background-color: var(--detalles-secundarios); box-shadow: 10px 10px 0px var(--botones-destacados); border-color: var(--contenedores); }
+.tarjeta-tarifa.tarifa-resaltada h3 { color: var(--botones-destacados); }
+.tarjeta-tarifa.tarifa-resaltada .precio { color: var(--contenedores); }
+.detalles-cuerpo { font-weight: bold; }
 
-/* estilos menu movil */
+/* reserva */
+.seccion-reserva { padding: 80px 40px; max-width: 800px; margin: 0 auto; background-color: var(--fondo-principal); }
+.formulario-bloque { background-color: var(--contenedores); border: 4px solid var(--botones-destacados); padding: 40px; box-shadow: 12px 12px 0px var(--detalles-secundarios); }
+.titulo-formulario { color: var(--botones-destacados); text-shadow: 2px 2px 0px var(--detalles-secundarios); text-align: center; font-size: 32px; }
+.formulario-retro { display: flex; flex-direction: column; gap: 20px; }
+.grupo-formulario label { font-family: var(--fuente-titulos); font-size: 14px; color: var(--botones-destacados); text-transform: uppercase; }
+.grupo-formulario input, .grupo-formulario select { padding: 12px; font-size: 16px; border: 3px solid var(--botones-destacados); background-color: #fff; color: var(--texto-informativo); font-weight: bold; }
+.boton-enviar {
+    background-color: var(--botones-destacados); color: var(--contenedores); font-family: var(--fuente-titulos);
+    font-size: 24px; padding: 15px; border: 4px solid var(--contenedores); cursor: pointer;
+    box-shadow: 6px 6px 0px var(--detalles-secundarios); margin-top: 15px; text-transform: uppercase;
+}
+.boton-enviar:hover { background-color: var(--detalles-secundarios); color: var(--contenedores); }
+
+/* responsive movil */
 @media (max-width: 768px) {
-    .boton-menu {
-        display: block;
-    }
-
+    .boton-menu { display: block; color: var(--botones-destacados); }
     .menu-navegacion {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        background-color: var(--contenedores); /* menu desplegado azul oscuro */
-        position: fixed; 
-        top: 68px;
-        right: 0; 
-        width: 100%; 
-        height: calc(100vh - 68px); 
-        padding: 40px 20px;
-        transform: translateX(100%); 
-        transition: transform 0.4s ease; 
-        z-index: 99;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        background-color: var(--contenedores); position: fixed; top: 68px; right: 0; 
+        width: 100%; height: calc(100vh - 68px); transform: translateX(100%); transition: transform 0.4s; z-index: 99;
     }
-
-    .menu-navegacion a {
-        color: var(--fondo-principal); /* letras crema en menu movil */
-        font-size: 22px; 
-        margin: 20px 0;
-    }
-
-    .menu-navegacion a:hover {
-        color: var(--detalles-secundarios);
-    }
-
-    .menu-navegacion.activo {
-        transform: translateX(0); 
-    }
-
-    /* adaptacion de secciones para celulares */
-    .seccion-festival, .seccion-cartelera {
-        padding: 40px 20px; 
-    }
-
-    .contenedor-festival, .cuadricula-peliculas, .pelicula-destacada {
-        flex-direction: column; /* todo se apila en una sola columna vertical */
-        gap: 30px;
-    }
-
-    .caja-poster {
-        height: 420px; /* conserva el formato vertical grande en el movil */
-        width: 100%;
-    }
+    .menu-navegacion a { font-size: 22px; margin: 20px 0; color: var(--botones-destacados); font-family: var(--fuente-titulos); }
+    .menu-navegacion.activo { transform: translateX(0); }
+    .seccion, .seccion-reserva, .seccion-cartelera { padding: 40px 20px; }
+    .contenedor-festival, .cuadricula-peliculas, .pelicula-destacada, .contenedor-flex, .doble-columna { flex-direction: column; gap: 30px; }
+    .marco-retro-poster { padding: 8px; width: 100%; max-width: 340px; margin: 0 auto 15px auto; }
+    .img-poster { height: 440px; object-fit: contain; }
+    .pelicula-destacada img.img-horizontal { height: auto; width: 100%; }
+    .tarjeta-tarifa.tarifa-resaltada { transform: scale(1); }
 }

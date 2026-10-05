@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockbuster-Fest: Edición Navideña</title>
     
-    <!-- fuentes google -->
+    <!-- tipografias del manual de identidad visual -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
 
-    <!-- mi hoja de estilos -->
+    <!-- estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- cabecera del sitio -->
+    <!-- menu cabecera -->
     <header class="cabecera">
         <div class="logo">
             <h1>Blockbuster-Fest</h1>
         </div>
         
-        <!-- enlaces del menu -->
         <nav class="menu-navegacion" id="menu">
             <a href="#festival">El Festival</a>
             <a href="#cartelera">Cartelera</a>
@@ -29,7 +28,6 @@
             <a href="#reserva">Reserva</a>
         </nav>
         
-        <!-- boton del menu movil -->
         <button class="boton-menu" id="btn-menu">
             <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://w3.org">
                 <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
@@ -37,67 +35,133 @@
         </button>
     </header>
 
-    <!-- cuerpo de pagina -->
     <main>
-
-        <!-- seccion 1 festival -->
-        <section id="festival" class="seccion-festival">
+        <!-- festival -->
+        <section id="festival" class="seccion">
+            <!-- TITULO CENTRADO -->
+            <h2 class="titulo-centrado">Presentación del festival</h2>
             <div class="contenedor-festival">
-                
                 <div class="imagen-festival">
-                    <img src="https://www.centrocentro.org/sites/default/files/styles/imagenes_medianas/public/static_page/image/Galer%C3%ADa%20de%20Cristal%201170x630_0.jpg.webp?itok=J75oF9nz" alt="Galería de Cristal del Palacio de Cibeles">
+                    <img src="./imagenes/Palacio.jpeg" alt="Palacio de Cibeles Madrid">
                 </div>
-
-                <!-- contenido festival -->
-                <div class="texto-festival">
-                    <h2>Presentación del festival</h2>
+                <div class="texto-festival-bloque">
                     <p>Blockbuster-Fest: Edición Navideña cuenta con una propuesta cultural para diferentes generaciones, diseñada para revivir la esencia cinematográfica de la icónica época de los 80 en un entorno familiar y confortable. El evento se celebrará durante el periodo de invierno, del 26 al 30 de diciembre, aprovechando las navidad para reunir a familias junto a clásicos de la cultura pop. Para garantizar una buena experiencia con el clima frío en Madrid, el festival se realizará en la Galería de Cristal del Palacio de Cibeles. Este espacio, climatizado y techado, ofrece el espacio adecuado para colocar una pantalla de gran formato, compartiendo un ambiente cómodo entre las familias.</p>
                 </div>
-                
             </div>
         </section>
-                <!-- seccion 2 cartelera -->
+
+        <!-- cartelera -->
         <section id="cartelera" class="seccion-cartelera">
-            <h2>Cartelera de películas</h2>
+            <!-- TITULO CENTRADO -->
+            <h2 class="titulo-seccion">Cartelera de películas</h2>
             
-            <!-- contenedor pelis normales -->
             <div class="cuadricula-peliculas">
-                
                 <div class="tarjeta-pelicula">
-                    <div class="caja-poster">Póster E.T.</div>
-                    <h3>E.T. El Extraterrestre</h3>
-                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                    <div class="marco-retro-poster">
+                        <img src="./imagenes/E.T.jpeg" alt="Póster E.T. El Extraterrestre" class="img-poster">
+                    </div>
+                    <h3 class="titulo-peli">E.T. El Extraterrestre</h3>
+                    <p class="sinopsis"><strong>Fecha:</strong> 26 de Diciembre - 18:00h<br>Un pequeño extraterrestre se queda varado en la Tierra y entabla amistad con un niño llamado Elliott.</p>
                 </div>
                 
                 <div class="tarjeta-pelicula">
-                    <div class="caja-poster">Póster Los Goonies</div>
-                    <h3>Los Goonies</h3>
-                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                    <div class="marco-retro-poster">
+                        <img src="./imagenes/Los_Goonies.jpeg" alt="Póster Los Goonies" class="img-poster">
+                    </div>
+                    <h3 class="titulo-peli">Los Goonies</h3>
+                    <p class="sinopsis"><strong>Fecha:</strong> 27 de Diciembre - 18:00h<br>Un grupo de jóvenes amigos descubren un misterioso mapa del tesoro pirata e inician su gran aventura.</p>
                 </div>
                 
                 <div class="tarjeta-pelicula">
-                    <div class="caja-poster">Volver al futuro</div>
-                    <h3>Volver al Futuro</h3>
-                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                    <div class="marco-retro-poster">
+                        <img src="./imagenes/Volver_Al_Futuro.jpeg" alt="Póster Volver al Futuro" class="img-poster">
+                    </div>
+                    <h3 class="titulo-peli">Volver al Futuro</h3>
+                    <p class="sinopsis"><strong>Fecha:</strong> 28 de Diciembre - 18:00h<br>El adolescente Marty McFly es enviado accidentalmente de vuelta al año 1955 en un DeLorean.</p>
                 </div>
-                
             </div>
 
-            <!-- contenedor destacado ultima pelicula -->
             <div class="pelicula-destacada">
-                <div class="poster-destacado">Póster Gremlins - Experiencia inmersiva Gourmet!</div>
+                <img src="./imagenes/Gremlins.jpeg" alt="Póster Gremlins - Experiencia Gourmet" class="img-horizontal">
                 <div class="texto-destacado">
                     <h3>¡Queremos cerrar el festival de la mejor manera!</h3>
                     <p>Es por eso que te invitamos a participar en nuestra última proyección, Gremlins, que podrás disfrutar compartiendo las mismas comidas de la cinta en familia en simultáneo a los personajes.</p>
-                    <p class="sinopsis">Fecha de proyección y sinópsis</p>
+                    <p class="sinopsis"><strong>Fecha:</strong> 30 de Diciembre - 20:00h<br>El caos se desata en el pueblo cuando se rompen las tres reglas estrictas del cuidado de un Mogwai.</p>
                 </div>
             </div>
         </section>
 
+        <!-- marquesina -->
+        <div class="marquesina-decorativa">
+            <span>PROGRAMACIÓN • ENCUENTROS • TERRAZA • CIBELES DE CINE • CINE AL AIRE LIBRE • </span>
+            <span>PROGRAMACIÓN • ENCUENTROS • TERRAZA • CIBELES DE CINE • CINE AL AIRE LIBRE • </span>
+        </div>
 
+        <!-- tarifas -->
+        <section id="tarifas" class="seccion t-centro">
+            <h2 class="titulo-blanco">Tarifas Especiales</h2>
+            <div class="contenedor-flex">
+                <div class="tarjeta-tarifa">
+                    <h3>Entrada General</h3>
+                    <p class="precio">8,50€</p>
+                    <p class="detalles-cuerpo">Acceso a la proyección clásica seleccionada y zona de restauración del Palacio de Cibeles.</p>
+                </div>
+                
+                <div class="tarjeta-tarifa tarifa-resaltada">
+                    <div class="etiqueta-retro">¡RECOMENDADO!</div>
+                    <h3>Experiencia Inmersiva</h3>
+                    <p class="precio">15,00€</p>
+                    <p class="detalles-cuerpo">Incluye entrada general, butaca preferente y menú gastronómico temático para Gremlins.</p>
+                </div>
+                
+                <div class="tarjeta-tarifa">
+                    <h3>Pase Familiar (4 pax)</h3>
+                    <p class="precio">28,00€</p>
+                    <p class="detalles-cuerpo">Entrada combinada válida para 2 adultos y 2 niños menores de 12 años para cualquier sesión.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- reserva -->
+        <section id="reserva" class="seccion-reserva">
+            <div class="formulario-bloque">
+                <h2 class="titulo-formulario">Asegura tus entradas</h2>
+                <p class="detalles-cuerpo">Completa el formulario oficial para reservar tus localidades en la Galería de Cristal.</p>
+                
+                <form id="formulario-reserva" class="formulario-retro" novalidate>
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Marty McFly">
+                    </div>
+                    
+                    <div class="grupo-formulario">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="ejemplo@delorean.com">
+                    </div>
+
+                    <div class="doble-columna">
+                        <div class="grupo-formulario">
+                            <label for="tarifa-seleccionada">Tipo de Tarifa</label>
+                            <select id="tarifa-seleccionada" name="tarifa-seleccionada">
+                                <option value="8.50">Entrada General (8,50€)</option>
+                                <option value="15.00">Experiencia Inmersiva (15,00€)</option>
+                                <option value="28.00">Pase Familiar (28,00€)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grupo-formulario">
+                            <label for="cantidad">Cantidad</label>
+                            <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">Comprar Entradas</button>
+                </form>
+            </div>
+        </section>
     </main>
 
-    <!-- mi script de javascript -->
+    <!-- javascript -->
     <script src="app.js"></script>
 </body>
 </html>
