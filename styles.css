@@ -1,17 +1,16 @@
-/* variables aplicadas directamente del manual de identidad visual */
+/* variables identidad visual */
 :root {
-    --fondo-principal: #1A2536;       /* Azul oscuro de fondo base */
-    --contenedores: #F7F4EB;          /* Crema claro para tarjetas y bloques */
-    --texto-informativo: #2C2A29;     /* Gris oscuro de lectura limpia */
-    --botones-destacados: #D95338;    /* Rojo terracota retro */
-    --detalles-secundarios: #EBB15B;  /* Amarillo mostaza */
+    --fondo-principal: #1A2536;       /* Azul oscuro */
+    --contenedores: #F7F4EB;          /* Crema */
+    --texto-informativo: #2C2A29;     /* Gris oscuro */
+    --botones-destacados: #D95338;    /* Rojo terracota */
+    --detalles-secundarios: #EBB15B;  /* Amarillo */
     
-    /* Fuente inflada, limpia y redondeada que clava el estilo Candice de tu guia */
+    /* Tipografías */
     --fuente-titulos: "Paytone One", sans-serif;
     --fuente-cuerpo: "DM Sans", sans-serif;
 }
 
-/* globales */
 html { scroll-behavior: smooth; }
 body {
     background-color: var(--fondo-principal);
@@ -28,12 +27,12 @@ h1, h2, h3 {
 .seccion-cartelera { padding: 80px 40px; max-width: 1200px; margin: 0 auto; background-color: var(--fondo-principal); }
 .t-centro { text-align: center; }
 
-/* CORREGIDO: Titulos de secciones completamente centrados */
+/* Titulos secciones */
 .titulo-centrado { text-align: center; color: var(--botones-destacados); font-size: 36px; margin-bottom: 40px; }
 .titulo-seccion { text-align: center; color: var(--contenedores); background-color: var(--detalles-secundarios); display: block; max-width: 500px; margin: 0 auto 40px auto; padding: 10px 25px; border: 4px solid var(--contenedores); box-shadow: 6px 6px 0px var(--botones-destacados); font-size: 32px; }
 .titulo-blanco { color: var(--fondo-principal); font-size: 36px; margin-bottom: 40px; }
 
-/* cabecera y menu */
+/* Cabecera y menu */
 .cabecera {
     background-color: var(--contenedores); 
     display: flex; justify-content: space-between; align-items: center;
@@ -49,7 +48,7 @@ h1, h2, h3 {
 .menu-navegacion a:hover { color: var(--botones-destacados); }
 .boton-menu { display: none; background: none; border: none; font-size: 30px; color: var(--botones-destacados); cursor: pointer; }
 
-/* festival flex */
+/* flex festival */
 .contenedor-festival, .cuadricula-peliculas, .pelicula-destacada, .contenedor-flex, .doble-columna { 
     display: flex; gap: 40px; align-items: center; 
 }
@@ -71,7 +70,7 @@ h1, h2, h3 {
 }
 .img-poster { width: 100%; height: 440px; display: block; object-fit: contain; }
 
-/* CORREGIDO: Titulos de peliculas centrados respecto a los posters */
+/* Titulos peliculas */
 .titulo-peli { 
     font-family: var(--fuente-titulos); font-size: 22px; 
     color: var(--detalles-secundarios); text-align: center; margin-top: 15px;
@@ -80,7 +79,7 @@ h1, h2, h3 {
 .tarjeta-pelicula .sinopsis { text-align: left; color: var(--contenedores); }
 .sinopsis { font-size: 15px; line-height: 1.5; color: var(--fondo-principal); }
 
-/* destacado */
+/* Gremlins */
 .pelicula-destacada {
     background-color: var(--contenedores); color: var(--texto-informativo); padding: 40px;
     border: 4px solid var(--fondo-principal); box-shadow: 12px 12px 0px var(--botones-destacados);
@@ -93,7 +92,7 @@ h1, h2, h3 {
 .texto-destacado h3 { color: var(--botones-destacados); font-family: var(--fuente-titulos); font-size: 24px; }
 .texto-destacado .sinopsis { color: var(--texto-informativo); }
 
-/* marquesina ochentera */
+/* decoración */
 .marquesina-decorativa {
     background-color: var(--botones-destacados); color: var(--contenedores);
     font-family: var(--fuente-titulos); padding: 15px 0; font-size: 20px;
@@ -130,7 +129,7 @@ h1, h2, h3 {
 }
 .boton-enviar:hover { background-color: var(--detalles-secundarios); color: var(--contenedores); }
 
-/* responsive movil */
+/* formato movil */
 @media (max-width: 768px) {
     .boton-menu { display: block; color: var(--botones-destacados); }
     .menu-navegacion {
