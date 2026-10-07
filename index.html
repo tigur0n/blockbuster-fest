@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blockbuster-Fest: Edición Navideña</title>
     
-    <!-- Tipografias -->
+    <!-- tipografias -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com" rel="stylesheet">
 
-    <!-- Estilos -->
+    <!-- estilos -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Menu y cabecera -->
+    <!-- menu cabecera -->
     <header class="cabecera">
         <div class="logo">
             <h1>Blockbuster-Fest</h1>
@@ -36,7 +36,7 @@
     </header>
 
     <main>
-        <!-- Sección festival -->
+        <!-- festival -->
         <section id="festival" class="seccion">
             <h2 class="titulo-centrado">Presentación del festival</h2>
             <div class="contenedor-festival">
@@ -44,12 +44,12 @@
                     <img src="./imagenes/Palacio.jpeg" alt="Palacio de Cibeles Madrid">
                 </div>
                 <div class="texto-festival-bloque">
-                    <p>Blockbuster-Fest: Edición Navideña cuenta con una propuesta cultural para diferentes generaciones, diseñada para revivir la esencia cinematográfica de la icónica época de los 80 en un entorno familiar y confortable. El evento se celebrará durante el periodo de invierno, del 26 al 30 de diciembre, aprovechando las navidad para reunir a familias junto a clásicos de la cultura pop. Para garantizar una buena experiencia con el clima frío en Madrid, el festival se realizará en la Galería de Cristal del Palacio de Cibeles. Este espacio, climatizado y techado, ofrece el espacio adecuado para colocar una pantalla de gran formato, compartiendo un ambiente cómodo entre las familias.</p>
+                    <p>Blockbuster-Fest: Edición Navideña cuenta con una propuesta cultural para diferentes generations, diseñada para revivir la esencia cinematográfica de la icónica época de los 80 en un entorno familiar y confortable. El evento se celebrará durante el periodo de invierno, del 26 al 30 de diciembre, aprovechando las navidad para reunir a familias junto a clásicos de la cultura pop. Para garantizar una buena experiencia con el clima frío en Madrid, el festival se realizará en la Galería de Cristal del Palacio de Cibeles. Este espacio, climatizado y techado, ofrece el espacio adecuado para colocar una pantalla de gran formato, compartiendo un ambiente cómodo entre las familias.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SSección Cartelera -->
+        <!-- cartelera -->
         <section id="cartelera" class="seccion-cartelera">
             <h2 class="titulo-seccion">Cartelera de películas</h2>
             
@@ -89,13 +89,13 @@
             </div>
         </section>
 
-        <!-- Decoración -->
+        <!-- marcasina decorativa -->
         <div class="marquesina-decorativa">
             <span>PROGRAMACIÓN • ENCUENTROS • TERRAZA • CIBELES DE CINE • CINE AL AIRE LIBRE • </span>
             <span>PROGRAMACIÓN • ENCUENTROS • TERRAZA • CIBELES DE CINE • CINE AL AIRE LIBRE • </span>
         </div>
 
-        <!-- Tarifas -->
+        <!-- tarifas -->
         <section id="tarifas" class="seccion t-centro">
             <h2 class="titulo-blanco">Tarifas Especiales</h2>
             <div class="contenedor-flex">
@@ -120,9 +120,10 @@
             </div>
         </section>
 
-        <!-- Formulario para reserva -->
+        <!-- reserva -->
         <section id="reserva" class="seccion-reserva">
-            <div class="formulario-bloque">
+            <div class="layout-reserva">
+                 <div class="formulario-bloque">
                 <h2 class="titulo-formulario">Asegura tus entradas</h2>
                 <p class="detalles-cuerpo">Completa el formulario oficial para reservar tus localidades en la Galería de Cristal.</p>
                 
@@ -157,6 +158,29 @@
                 </form>
             </div>
         </section>
+                    <aside class="resumen-factura">
+                <h3>Factura</h3>
+                <ul class="resumen__lista" id="factura-desglose"></ul>
+                <div class="resumen__cuentas">
+                    <div class="resumen__fila">
+                        <span>Pases totales:</span>
+                        <strong id="factura-pases">0</strong>
+                    </div>
+                    <div class="resumen__fila">
+                        <span>Subtotal neto:</span>
+                        <strong id="factura-subtotal">0,00 €</strong>
+                    </div>
+                    <div class="resumen__fila">
+                        <span>Gastos de gestión <small>(+1,50 € por pase)</small>:</span>
+                        <strong id="factura-gastos">0,00 €</strong>
+                    </div>
+                    <div class="resumen__fila resumen__fila--total">
+                        <span>Total a Pagar:</span>
+                        <strong id="factura-total">0,00 €</strong>
+                    </div>
+                </div>
+                <div id="mensaje-taquilla" class="mensaje-alerta"></div>
+            </aside>
     </main>
 
     <!-- javascript -->
